@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: $text-c1-dark;
+    @media screen and (max-width: 550px) {
+      display: block;
+      padding: 0;
+
+    }
+    .logo {
+      img {
+      }
+    }
+    .register {
+      .sale {
+        color: $text-c1-white;
+        display: flex;
+        // justify-content: space-around;
+        align-items: center;
+
+        // @media screen and (max-width: 300px) {
+        //   display: block;
+        // }
+        .shopping {
+          display: flex;
+          // justify-content: space-around;
+          align-items: center;
+          img {
+            width: 31px;
+            height: 31px;
+            @media screen and (max-width: 550px) {
+              width: 28px;
+              height: 28px;
+            }
+          }
+
+          .number {
+            //   display: inline-block;
+            margin: 0;
+            font-size: 30px;
+            height: fit-content;
+            margin-right: 15px;
+            @media screen and (max-width: 550px) {
+              font-size: 28px;
+            }
+          }
+        }
+
+        .login {
+          margin: 0;
+          font-weight: 300;
+          margin-right: 15px;
+          @media screen and (max-width: 550px) {
+            font-size: 14px;
+          }
+        }
+        .register-btn {
+          margin: 0;
+          font-weight: 300;
+          margin-right: 15px;
+          @media screen and (max-width: 550px) {
+            font-size: 14px;
+          }
+          a {
+            text-decoration: none;
+            color: #fff;
+            @media screen and (max-width: 550px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

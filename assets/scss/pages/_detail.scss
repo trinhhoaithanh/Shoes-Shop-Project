@@ -1,0 +1,259 @@
+.navigation {
+  .container-fluid {
+    // max-width: 1200px;
+    padding: 0 2%;
+    .menu {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        @include text($texts-md-1, $textw-sm-2, $text-c1-dark);
+        padding-right: 24px;
+        position: relative;
+        transition: all 0.3s;
+        &:hover {
+          @include text($texts-md-1, $textw-md-1, $text-c1-dark);
+          &::after {
+            width: 68%;
+          }
+        }
+        &::after {
+          content: "";
+          background-color: $text-c1-dark;
+          width: 0;
+          height: 1px;
+          position: absolute;
+          z-index: 1;
+          bottom: -5px;
+          left: 0;
+          cursor: pointer;
+          transition: width 0.5s;
+          @media screen and (max-width: 768px) {
+            bottom: 0;
+          }
+        }
+        &.Home {
+          &:hover {
+            &::after {
+              width: 70px;
+              @media screen and (max-width: 768px) {
+                left: 0;
+                width: 55px;
+              }
+            }
+          }
+        }
+        &.Men {
+          &:hover {
+            &::after {
+              width: 55px;
+              @media screen and (max-width: 768px) {
+                left: 0;
+                width: 40px;
+              }
+            }
+          }
+        }
+        &.Woman {
+          &:hover {
+            &::after {
+              width: 85px;
+              @media screen and (max-width: 768px) {
+                left: 0;
+                width: 70px;
+              }
+            }
+          }
+        }
+        &.Kid {
+          &:hover {
+            &::after {
+              width: 45px;
+              @media screen and (max-width: 768px) {
+                left: 0;
+                width: 30px;
+              }
+            }
+          }
+        }
+        &.Sport {
+          &:hover {
+            &::after {
+              width: 65px;
+              @media screen and (max-width: 768px) {
+                left: 0;
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.detail-product {
+  .container {
+    padding-top: 58px;
+    margin-bottom: 39px;
+    .row {
+      .col1 {
+        .content {
+          img {
+            background-color: #f8f8f8;
+          }
+        }
+      }
+      .col2 {
+        .content {
+          .title {
+            @include text($texts-lg-2, $textw-sm-2, $text-c1-dark);
+          }
+          .descript {
+            @include text($texts-sm-2, $textw-md-1, #140101);
+          }
+          .state {
+            @include text($texts-md-2, $textw-md-2, $text-c1-green);
+          }
+          .sizes {
+            display: flex;
+            padding: 0;
+            margin-bottom: 17px;
+            margin-top: 20px;
+            .btn-size {
+              @include text($texts-md-2, $textw-lg-1, #1e1d1d);
+              list-style: none;
+              padding: 10px;
+              background-color: $text-c1-gray;
+              margin-right: 20px;
+            }
+          }
+          .price {
+            p {
+              @include text($texts-lg-2, $textw-lg-1, $text-c1-red);
+            }
+          }
+          .count {
+            display: flex;
+            .btn-plus {
+              @include text($texts-lg-2, $textw-md-1, #fffcfc);
+              padding: 6px 17px 12px 15px;
+              background: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+              span {
+                display: inline-block;
+                height: 32px;
+                width: 18px;
+              }
+            }
+            .number {
+              @include text($texts-lg-2, $textw-md-1, $text-c1-dark);
+              padding: 0 18px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .btn-minus {
+              @include text($texts-lg-2, $textw-md-1, #fffcfc);
+              padding: 6px 17px 12px 15px;
+              background: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+              span {
+                display: inline-block;
+                height: 32px;
+                width: 18px;
+              }
+            }
+          }
+          .button {
+            height: 64px;
+            width: 175px;
+            background: linear-gradient(
+              270deg,
+              rgba(62, 32, 248, 0.9) 5.14%,
+              #d017ee 89.71%
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 7px;
+            .add {
+              @include text($texts-md-2, $textw-md-2, #fff8f8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.relate-product {
+  .container-fluid {
+    max-width: 1200px;
+    .title {
+      padding-top: 16px;
+      text-align: center;
+      h1 {
+        @include text($texts-xl-1, $textw-md-1, $text-c1-dark);
+        padding-bottom: 42px;
+      }
+    }
+    .products {
+      .row {
+        .col-12 {
+          margin-top: 47px;
+          padding: 0 30px;
+          .product-item {
+            background-color: #f8f8f8;
+            .image {
+              // background-color: $text-c1-gray;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                padding: 45px 57px 30px 57px;
+              }
+            }
+            .detail {
+              padding-left: 23px;
+              .name {
+                @include text($texts-md-2, $textw-sm-2, $text-c1-dark);
+              }
+              .descript {
+                padding-top: 8px;
+                @include text($texts-md-1, $textw-sm-2, #cbc9c9);
+              }
+            }
+            .prices {
+              margin-top: 13px;
+              display: flex;
+
+              .buy {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #e1b067;
+                padding: 18px 0;
+                @include text($texts-md-2, $textw-sm-1, $text-c1-dark);
+              }
+              .cost {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #dedddc;
+                padding: 18px 0;
+                @include text($texts-md-2, $textw-lg-1, $text-c1-dark);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
